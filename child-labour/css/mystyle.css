@@ -1,0 +1,278 @@
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+:root {
+    --primarycolor: #ffc513;
+    --bodycolor: #000000;
+    --bodybackground: #f1f3f6;
+    --bordercolor: rgba(72, 94, 144, 0.16);
+    --mainbackground: #fff;
+}
+a{
+	text-decoration: none;
+}
+ul{
+	margin:0;
+}
+.spacer{
+	width: 100%;
+	height: 50px;
+}
+.centerTitle{
+	padding: 5px 0;
+	display: inline-block;
+	border-bottom: 2px solid var(--primarycolor);
+}
+/* ------------------------------------common code------------------------------------------------- */
+
+#mainHeader{
+	position: fixed;
+	width: 100%;
+	height: 10vh;
+	z-index: 999;
+	/* background: var(--bodybackground); */
+}
+.mainHeader.scrolled-header{
+	background-color: #000;
+}
+.bg-grey{
+	background-color: #000;
+}
+.headerWrapper{
+	height: 10vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	
+}
+.logo a{
+	font-size: 2rem;
+	color: var(--primarycolor);
+}
+.menu{
+	position: relative;
+	margin-left: auto;
+}
+.menu nav{
+	position: relative;	
+}
+.menu nav ul{
+	position: relative;
+	display: flex;	
+}
+.menu nav ul li{
+	list-style: none;
+	margin-right: 25px;
+}
+.menu nav ul li a{
+	color: var(--primarycolor);
+	font-weight: 600;
+	font-size: 1.1rem;
+}
+.menu nav ul li a.mButton{
+	background-color: var(--primarycolor);
+	color: #000;
+	padding: 3px 12px;
+	border-radius: 15px;
+}
+.menu nav ul li a:hover{
+	color: #fff;
+}
+.menuToggler{
+	display: none;
+}
+
+
+
+/* ----------------------------------------------- carousel ---------------------------------- */
+
+.carousel-caption {
+    position: absolute;
+	left: 10%;
+    top: 50%;
+	width: 30%;
+	transform: translateY(-30%);
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: left;
+}
+.carousel-caption h2{
+	font-size: 3rem;
+}
+.carousel-caption h2 span{
+	color:var(--primarycolor);
+	font-weight: 700;
+}
+.carousel-caption a{
+	background-color: var(--primarycolor);
+	padding: 10px 20px;
+	color:#000;
+	border-radius: 10px;
+
+}
+
+.carousel-indicators [data-bs-target] {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 15px;
+    height: 15px;
+	border-radius: 50%;     
+    background-color: transparent;
+    background-clip: padding-box;
+    border: 2px solid #fff;   
+    opacity: .5;
+    transition: opacity .6s ease;
+}
+.carousel-indicators [data-bs-target].active{
+	background-color: var(--primarycolor);
+}
+
+/* --------------------------------------------  about ------------------------------------------ */
+#about{
+	width: 100%;
+	padding: 50px 0;
+}
+.aboutImg{
+	width: 100%;
+	height: 100%;
+}
+.aboutImg img{
+	width: 100%;
+}
+.titleDesign{
+	width: 30px;
+	height: 3px;
+	display: block;
+	background-color: var(--primarycolor);
+}
+.sideTitle{
+	padding: 10px 0;
+}
+.aboutText a{
+	padding: 10px 20px;
+	background-color: var(--primarycolor);
+	color: #fff;
+	border-radius: 20px;
+
+}
+/* -------------------------------------how we work----------------------------------- */
+.how-we-work-content{
+	padding: 0 10px;
+}
+.how-we-work-content ul{
+	padding: 20px 30px;
+	border: 2px solid var(--primarycolor);
+	border-radius: 20px;
+
+}
+.how-we-work-content ul li{
+	list-style: none;	
+	margin: 5px 0;
+	padding: 5px 0;
+	border-bottom: 1px solid #e8e9ea;
+}
+/* --------------------------------our team member ------------------------------ */
+.ourteam{
+	width: 100%;
+	background-color: #e9e8e8;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+}
+.team-box{
+	text-align: center;
+}
+.team-img{
+	width: 100%;
+	max-width: 100%;
+	padding: 20px;
+	
+}
+.team-img img{
+	width: 80%;
+	background-color: #ffc513;
+	border-radius: 50px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+.course{
+	display: inline-block;
+	padding: 5px 10px;
+	border: 2px solid var(--primarycolor);
+	border-radius: 10px;
+}
+
+/* --------------------------------------sign in--------------------- */
+#admin{
+    width: 100%;
+    height: 100vh;
+    background: url(../images/adminbg.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-size: cover;
+}
+.adminwrapper{
+    width: 80vw;
+    height: 80vh;
+    object-fit: cover;
+    background-color: #ffffff20;
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+}
+.adminForm{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.adminForm form{
+    width: 100%;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+}
+.adminForm form input{
+ margin-bottom: 30px;
+ padding: 10px 10px;
+ background: transparent;
+ border: none;
+ border-radius: 10px;
+ backdrop-filter: blur(5px);
+}
+.admin-image{
+    width: 100%;
+}
+.admin-image img{
+    width: 100%;
+}
+
+
+/* ------------------------------------- footer---------------------------------------------- */
+footer{
+	width: 100%;
+	padding: 30px 10px;
+	background-color: #000000dc;
+}
+.footer-text{
+	padding: 20px 10px;
+}
+.footer-text p{
+	color: #fff;
+}
+.footer-title h3{
+	color: #fff;
+}
+.footer-links ul li{
+	padding: 5px 0;
+}
+.footer-links ul li a{
+	color: #fff;
+}
+.social-icon ul li a{
+	color: #fff;
+}
